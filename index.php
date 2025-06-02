@@ -1,11 +1,7 @@
 <?php
+require_once __DIR__ . "/lib/article.php";
 require_once __DIR__ . "/templates/header.php";
 
-$articles = [
-    ["title" => "PHP VS Python", "content" => "Dans cet article, nous allons explorer les différences et les avantages de PHP et Python, deux langages de programmation populaires, afin de vous aider à choisir celui qui convient le mieux à vos projets.", "image" => "1-php-vs-python.jpg"],
-    ["title" => "react VS react native", "content" => "Dans cet article, nous allons explorer les différences clés entre React et React Native, afin de mieux comprendre leurs spécificités et leurs applications respectives dans le développement d'applications web et mobiles.", "image" => "2-react-vs-react-native.jpg"],
-    ["title" => "Les meilleurs outils de devops", "content" => "Découvrez les meilleurs outils DevOps qui optimisent la collaboration entre les équipes de développement et d'exploitation, améliorent l'automatisation des processus et garantissent une livraison continue de qualité.", "image" => "3-devops.png"]
-];
 
 ?>
 
@@ -23,18 +19,9 @@ $articles = [
 </div>
 
 <div class="row text-center">
-    <?php foreach ($articles as $key => $article) { ?>
-        <div class="col-md-4 my-2">
-            <div class="card">
-                <img src="./uploads/<?= $article["image"] ?>" class="card-img-top" alt="<?= $article["image"] ?>">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $article["title"] ?></h5>
-                    <p class="card-text"><?= $article["content"] ?></p>
-                    <a href="#" class="btn btn-primary">Voir l'article</a>
-                </div>
-            </div>
-        </div>
-    <?php } ?>
+    <?php foreach ($articles as $key => $article) {
+        require __DIR__ . "/templates/article_part.php";
+    } ?>
 </div>
 
 
