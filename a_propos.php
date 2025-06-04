@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . "/templates/header.php" ?>
+<?php
+require_once __DIR__ . "/lib/navigation.php";
+require_once __DIR__ . "/templates/header.php"
+?>
 
 <h1 class="mb-3">A propos de TechTrendz</h1>
 

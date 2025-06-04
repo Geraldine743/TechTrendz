@@ -1,12 +1,11 @@
-<?php require_once __DIR__ . "/../lib/navigation.php"; ?>
-
-
 </main>
 <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <?php foreach ($mainMenu as $key => $menuItem) { ?>
-            <li class="nav-item"><a href="<?= $key ?>" class="nav-link px-2 text-body-secondary"><?= $menuItem["menu_title"] ?></a></li>
-        <?php } ?>
+        <?php foreach ($mainMenu as $key => $menuItem) {
+            if (!array_key_exists("exclude", $menuItem)) { ?>
+                <li class="nav-item"><a href="<?= $key ?>" class="nav-link px-2 text-body-secondary"><?= $menuItem["menu_title"] ?></a></li>
+        <?php }
+        } ?>
     </ul>
     <p class="text-center text-body-secondary">© 2025 TechTrendz, Inc</p>
 </footer>

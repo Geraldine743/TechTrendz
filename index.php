@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/lib/article.php";
+require_once __DIR__ . "/lib/navigation.php";
 require_once __DIR__ . "/templates/header.php";
 
 
@@ -13,7 +14,7 @@ require_once __DIR__ . "/templates/header.php";
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Explorez le futur, un pixel à la fois !</h1>
         <p class="lead">Découvrez notre blog dédié à l'informatique, où passion et expertise se rencontrent pour vous offrir des articles variés sur les dernières tendances, astuces et innovations technologiques.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="#" class="btn btn-primary btn-lg px-4 me-md-2">Voir les actualités</a>
+            <a href="actualites.php" class="btn btn-primary btn-lg px-4 me-md-2">Voir les actualités</a>
         </div>
     </div>
 </div>
