@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/lib/pdo.php";
 require_once __DIR__ . "/lib/article.php";
 $id = $_GET["id"];
 $article = $articles[$id];
