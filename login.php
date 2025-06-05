@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/lib/session.php";
 require_once __DIR__ . "/lib/navigation.php";
 require_once __DIR__ . "/lib/pdo.php";
 require_once __DIR__ . "/lib/user.php";
@@ -11,6 +12,8 @@ if (isset($_POST["loginUser"])) {
     $password = $_POST["password"];
     $user = verifyUserLoginPassword($pdo, $email, $password);
     if ($user) {
+        session_regenerate_id();
+        $_SESSION["user"] = $user;
         if ($user["role"] === "user") {
             header("location:index.php");
         } elseif ($user["role"] === "admin") {
