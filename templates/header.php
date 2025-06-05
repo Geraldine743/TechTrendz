@@ -34,8 +34,12 @@ $currentPage = basename($_SERVER["SCRIPT_NAME"]);
 
             </ul>
             <div class="col-md-3 text-end">
-                <a href="login.php" class="btn btn-outline-primary me-2">Se connecter</a>
-                <button type="button" class="btn btn-primary">S'inscrire</button>
+                <?php if (isset($_SESSION["user"])) { ?>
+                    <a href="logout.php" class="btn btn-primary">Se deconnecter</a>
+                <?php } else { ?>
+                    <a href="login.php" class="btn btn-outline-primary me-2">Se connecter</a>
+                <?php } ?>
+
             </div>
         </header>
         <main>
